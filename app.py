@@ -13,9 +13,10 @@ from linebot.models import (
 
 app = Flask(__name__)
 
-line_bot_api = LineBotApi('') #Your Channel Access Token
-handler = WebhookHandler('') #Your Channel Secret
-
+#line_bot_api = LineBotApi('') #Your Channel Access Token
+#handler = WebhookHandler('') #Your Channel Secret
+line_bot_api = LineBotApi('PhDjdnkZ/9aQxmJSbynyMWi1RWOGi/tNiV5+7I0s9h5hoDU+TI6Cyqb32K62uI8L6afXPbB4UAkexqG9nHg/XJhBXWrjPjAulfrHUy7DyQH7uWH9oReBtWTjbZ2aMK3i4X5iqW58+v2ZqnZzf8xMTgdB04t89/1O/w1cDnyilFU=')
+handler = WebhookHandler('507a265f755e0af4a585c597d981197d')
 @app.route("/callback", methods=['POST'])
 def callback():
     # get X-Line-Signature header value

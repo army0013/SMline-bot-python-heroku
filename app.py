@@ -10,7 +10,7 @@ from linebot.exceptions import (
 from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,
 )
-
+import inspect
 app = Flask(__name__)
 
 #line_bot_api = LineBotApi('') #Your Channel Access Token
@@ -40,7 +40,7 @@ def handle_text_message(event):
     
     line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text=event.__dict__))     
+            TextSendMessage(text=inspect.getmembers(event)))     
 #    for i in range(50):
   #reply the same message from user
     

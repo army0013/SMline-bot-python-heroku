@@ -36,12 +36,11 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_text_message(event):
-    text = event.message.text #message from user    
-    
+    text = event.message.text #message from user        
     line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text='ตู้กาก\n' +  str(event.__dict__))
             )
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0',port=8088)
+    app.run(host='0.0.0.0',port=os.environ['PORT'])

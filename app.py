@@ -40,7 +40,7 @@ def handle_text_message(event):
     
     line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text=inspect.getmembers(event))     
+            TextSendMessage(text=str(event.__dict__))     
 
 
 import os

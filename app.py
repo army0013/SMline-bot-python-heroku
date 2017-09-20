@@ -40,10 +40,8 @@ def handle_text_message(event):
     
     line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text=inspect.getmembers(event)))     
-#    for i in range(50):
-  #reply the same message from user
-    
+            TextSendMessage(text=inspect.getmembers(event))     
+
 
 import os
 if __name__ == "__main__":

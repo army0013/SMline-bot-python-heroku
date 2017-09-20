@@ -40,9 +40,8 @@ def handle_text_message(event):
     
     line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text='ตู้กาก')     
+            TextSendMessage(text='ตู้กาก\n' +  str(event.__dict__))
+            )
 
-
-import os
 if __name__ == "__main__":
     app.run(host='0.0.0.0',port=8088)
